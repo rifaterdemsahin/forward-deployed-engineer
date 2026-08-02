@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🚀 Forward Deployed Engineer</title>
+<meta name="description" content="What a Forward Deployed Engineer does, how they operate, and why the role exists.">
+<style>
+  :root {
+    --bg: #0b0f19;
+    --bg-alt: #121826;
+    --card: #161d2e;
+    --text: #e7ecf7;
+    --text-dim: #9aa7bd;
+    --accent: #7c9eff;
+    --accent2: #ffb86c;
+    --accent3: #6ee7b7;
+    --accent4: #f472b6;
+    --border: #26314a;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f6f7fb;
+      --bg-alt: #ffffff;
+      --card: #ffffff;
+      --text: #1a2233;
+      --text-dim: #5b6478;
+      --accent: #3b5fe0;
+      --accent2: #d9770f;
+      --accent3: #0f9d6f;
+      --accent4: #c22a80;
+      --border: #e2e6f0;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+    background: radial-gradient(1200px 600px at 50% -10%, var(--bg-alt), var(--bg));
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px 100px; }
+  header.hero {
+    text-align: center;
+    padding: 80px 24px 48px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    margin: 0 0 12px;
+    letter-spacing: -0.02em;
+  }
+  .hero p.sub {
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    color: var(--text-dim);
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  nav.toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 32px 0 0;
+  }
+  nav.toc a {
+    text-decoration: none;
+    color: var(--text);
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    transition: transform .15s ease, border-color .15s ease;
+  }
+  nav.toc a:hover { transform: translateY(-2px); border-color: var(--accent); }
+
+  section {
+    margin: 72px 0;
+  }
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .section-head .emoji {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  h2 {
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  h3 { font-size: 1.1rem; margin: 0 0 8px; }
+  p { color: var(--text-dim); }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+  }
+  .grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
+  .grid .card p { margin: 0; font-size: 0.95rem; }
+  .grid .card h3 { display: flex; align-items: center; gap: 8px; }
+
+  .diagram {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    overflow-x: auto;
+  }
+  .diagram svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+  .diagram figcaption {
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    margin-top: 12px;
+  }
+
+  ul.quals { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+  ul.quals li {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 18px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  ul.quals li span.e { font-size: 1.3rem; }
+
+  blockquote {
+    border-left: 3px solid var(--accent);
+    margin: 0;
+    padding: 4px 0 4px 20px;
+    color: var(--text);
+    font-size: 1.15rem;
+    font-style: italic;
+  }
+
+  footer {
+    text-align: center;
+    padding: 40px 24px;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .pill {
+    font-size: 0.8rem;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="badge">🧭 A field guide to the role</div>
+    <h1>🚀 Forward Deployed Engineer</h1>
+    <p class="sub">Part engineer, part consultant, part firefighter — living inside the customer's world to turn a product into their solution.</p>
+    <nav class="toc">
+      <a href="#what">🛠️ What</a>
+      <a href="#how">⚙️ How</a>
+      <a href="#why">💡 Why</a>
+      <a href="#loop">🔁 The Loop</a>
+      <a href="#traits">🧬 Traits</a>
+    </nav>
+  </header>
+
+  <!-- WHAT -->
+  <section id="what">
+    <div class="section-head"><span class="emoji">🛠️</span><h2>What they do</h2></div>
+    <p>A Forward Deployed Engineer (FDE) is embedded directly with customers — writing code, wiring up integrations, and shipping working software on-site or in the customer's environment, instead of waiting for feature requests to travel back through a product roadmap.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>🧩 Integrate</h3>
+        <p>Connects the product to the customer's real systems: data pipelines, legacy APIs, auth, infra — the messy stuff.</p>
+      </div>
+      <div class="card">
+        <h3>⚡ Prototype fast</h3>
+        <p>Builds working demos and proofs-of-concept in days, not quarters, to prove value before scaling up.</p>
+      </div>
+      <div class="card">
+        <h3>🕵️ Diagnose</h3>
+        <p>Debugs in production, reads logs at 2am, finds root causes across stacks they didn't write.</p>
+      </div>
+      <div class="card">
+        <h3>📡 Relay signal</h3>
+        <p>Feeds sharp, prioritized feedback from the field back to core product & engineering teams.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section id="how">
+    <div class="section-head"><span class="emoji">⚙️</span><h2>How they work</h2></div>
+    <p>The FDE model flips the usual build → ship → support pipeline. It compresses discovery, delivery, and feedback into one embedded loop.</p>
+    <figure class="diagram">
+      <svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Traditional product pipeline versus forward deployed engineering flow">
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L8,3 L0,6 Z" fill="currentColor"/>
+          </marker>
+        </defs>
+        <style>
+          .lbl { font: 600 13px -apple-system, sans-serif; fill: var(--text); }
+          .sub { font: 400 11px -apple-system, sans-serif; fill: var(--text-dim); }
+          .box { fill: var(--card); stroke: var(--border); stroke-width: 1.5; }
+          .flowline { stroke: var(--accent); stroke-width: 2; fill: none; marker-end: url(#arrow); color: var(--accent); }
+          .flowline2 { stroke: var(--accent3); stroke-width: 2; fill: none; marker-end: url(#arrow); color: var(--accent3); }
+        </style>
+
+        <!-- Traditional -->
+        <text x="10" y="24" class="sub">🐢 Traditional pipeline</text>
+        <rect x="10" y="36" width="140" height="50" rx="10" class="box"/>
+        <text x="80" y="58" text-anchor="middle" class="lbl">📋 Product</text>
+        <text x="80" y="74" text-anchor="middle" class="sub">roadmap</text>
+
+        <rect x="190" y="36" width="140" height="50" rx="10" class="box"/>
+        <text x="260" y="58" text-anchor="middle" class="lbl">👩‍💻 Eng builds</text>
+        <text x="260" y="74" text-anchor="middle" class="sub">quarterly cycle</text>
+
+        <rect x="370" y="36" width="140" height="50" rx="10" class="box"/>
+        <text x="440" y="58" text-anchor="middle" class="lbl">📦 Ship release</text>
+        <text x="440" y="74" text-anchor="middle" class="sub">generic fit</text>
+
+        <rect x="550" y="36" width="140" height="50" rx="10" class="box"/>
+        <text x="620" y="58" text-anchor="middle" class="lbl">🏢 Customer</text>
+        <text x="620" y="74" text-anchor="middle" class="sub">hopes it fits</text>
+
+        <path d="M150,61 L190,61" class="flowline"/>
+        <path d="M330,61 L370,61" class="flowline"/>
+        <path d="M510,61 L550,61" class="flowline"/>
+
+        <!-- FDE model -->
+        <text x="10" y="140" class="sub">🚀 Forward deployed flow</text>
+        <rect x="10" y="152" width="150" height="60" rx="10" class="box"/>
+        <text x="85" y="176" text-anchor="middle" class="lbl">🏢 Customer site</text>
+        <text x="85" y="192" text-anchor="middle" class="sub">real workflows</text>
+
+        <rect x="205" y="152" width="150" height="60" rx="10" class="box"/>
+        <text x="280" y="176" text-anchor="middle" class="lbl">🚀 FDE embeds</text>
+        <text x="280" y="192" text-anchor="middle" class="sub">builds live, on-site</text>
+
+        <rect x="400" y="152" width="150" height="60" rx="10" class="box"/>
+        <text x="475" y="176" text-anchor="middle" class="lbl">✅ Working solution</text>
+        <text x="475" y="192" text-anchor="middle" class="sub">shipped this week</text>
+
+        <rect x="595" y="152" width="150" height="60" rx="10" class="box"/>
+        <text x="670" y="176" text-anchor="middle" class="lbl">📡 Insight → core</text>
+        <text x="670" y="192" text-anchor="middle" class="sub">product improves</text>
+
+        <path d="M160,182 L205,182" class="flowline2"/>
+        <path d="M355,182 L400,182" class="flowline2"/>
+        <path d="M550,182 L595,182" class="flowline2"/>
+        <path d="M670,152 C670,120 85,120 85,152" class="flowline2"/>
+      </svg>
+      <figcaption>The FDE collapses the feedback loop — building where the problem lives, then routing insight straight back to the core product.</figcaption>
+    </figure>
+  </section>
+
+  <!-- WHY -->
+  <section id="why">
+    <div class="section-head"><span class="emoji">💡</span><h2>Why the role exists</h2></div>
+    <blockquote>"Software doesn't fail in the demo. It fails in the customer's messy, specific reality." 🌍</blockquote>
+    <p style="margin-top:20px;">Complex customers — hospitals, banks, governments, industrial operators — don't run on clean, general-purpose workflows. Their data is scattered, their systems are decades old, and their problems are too specific for a one-size-fits-all product. Someone has to close that gap, fast, with working code instead of a slide deck.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>🎯 Speed to value</h3>
+        <p>Customers need proof it works in <em>their</em> world, not a sandbox — within weeks, not fiscal quarters.</p>
+      </div>
+      <div class="card">
+        <h3>🔬 Truth from the field</h3>
+        <p>Real constraints surface only when you're inside the system — an FDE brings that ground truth home.</p>
+      </div>
+      <div class="card">
+        <h3>🤝 Trust</h3>
+        <p>Being in the room, writing the fix live, builds credibility no sales deck can replace.</p>
+      </div>
+      <div class="card">
+        <h3>🧱 Foundation for scale</h3>
+        <p>Bespoke solutions today reveal the patterns that become general product features tomorrow.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOOP -->
+  <section id="loop">
+    <div class="section-head"><span class="emoji">🔁</span><h2>The day-to-day loop</h2></div>
+    <p>A rolling cycle repeated with every customer engagement:</p>
+    <figure class="diagram">
+      <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Circular workflow: listen, build, deploy, observe, feed back, repeat">
+        <defs>
+          <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+            <path d="M0,0 L8,3 L0,6 Z" fill="var(--accent2)"/>
+          </marker>
+        </defs>
+        <circle cx="250" cy="250" r="170" fill="none" stroke="var(--border)" stroke-width="1" stroke-dasharray="4 6"/>
+
+        <!-- nodes around circle -->
+        <g font-family="-apple-system, sans-serif">
+          <!-- Listen: top -->
+          <circle cx="250" cy="80" r="46" fill="var(--card)" stroke="var(--accent)" stroke-width="2"/>
+          <text x="250" y="75" text-anchor="middle" font-size="20">👂</text>
+          <text x="250" y="96" text-anchor="middle" font-size="12" fill="var(--text)">Listen</text>
+
+          <!-- Build: right -->
+          <circle cx="410" cy="200" r="46" fill="var(--card)" stroke="var(--accent2)" stroke-width="2"/>
+          <text x="410" y="195" text-anchor="middle" font-size="20">🔨</text>
+          <text x="410" y="216" text-anchor="middle" font-size="12" fill="var(--text)">Build</text>
+
+          <!-- Deploy: bottom right -->
+          <circle cx="350" cy="390" r="46" fill="var(--card)" stroke="var(--accent3)" stroke-width="2"/>
+          <text x="350" y="385" text-anchor="middle" font-size="20">🚀</text>
+          <text x="350" y="406" text-anchor="middle" font-size="12" fill="var(--text)">Deploy</text>
+
+          <!-- Observe: bottom left -->
+          <circle cx="150" cy="390" r="46" fill="var(--card)" stroke="var(--accent4)" stroke-width="2"/>
+          <text x="150" y="385" text-anchor="middle" font-size="20">👀</text>
+          <text x="150" y="406" text-anchor="middle" font-size="12" fill="var(--text)">Observe</text>
+
+          <!-- Feed back: left -->
+          <circle cx="90" cy="200" r="46" fill="var(--card)" stroke="var(--accent)" stroke-width="2"/>
+          <text x="90" y="195" text-anchor="middle" font-size="20">📡</text>
+          <text x="90" y="216" text-anchor="middle" font-size="12" fill="var(--text)">Feed back</text>
+        </g>
+
+        <!-- connecting arcs -->
+        <g fill="none" stroke="var(--accent2)" stroke-width="2.5">
+          <path d="M285,95 A170,170 0 0,1 395,160" marker-end="url(#arrow2)"/>
+          <path d="M420,242 A170,170 0 0,1 380,352" marker-end="url(#arrow2)"/>
+          <path d="M312,405 A170,170 0 0,1 188,405" marker-end="url(#arrow2)"/>
+          <path d="M120,352 A170,170 0 0,1 80,242" marker-end="url(#arrow2)"/>
+          <path d="M105,160 A170,170 0 0,1 215,95" marker-end="url(#arrow2)"/>
+        </g>
+
+        <text x="250" y="255" text-anchor="middle" font-size="13" fill="var(--text-dim)" font-style="italic">repeat 🔄</text>
+      </svg>
+      <figcaption>Listen → Build → Deploy → Observe → Feed back — then go again, sharper each time.</figcaption>
+    </figure>
+  </section>
+
+  <!-- TRAITS -->
+  <section id="traits">
+    <div class="section-head"><span class="emoji">🧬</span><h2>Who does this well</h2></div>
+    <ul class="quals">
+      <li><span class="e">🧗</span> <span><strong>Comfortable with ambiguity</strong> — the spec is "make it work," and the requirements live in someone's head.</span></li>
+      <li><span class="e">🗣️</span> <span><strong>Talks to humans, not just terminals</strong> — half the job is understanding what the customer actually needs, not what they asked for.</span></li>
+      <li><span class="e">🏃</span> <span><strong>Bias to ship</strong> — a rough working prototype today beats a perfect plan next month.</span></li>
+      <li><span class="e">🧠</span> <span><strong>Full-stack curiosity</strong> — happy moving from infra to UI to data pipeline in the same afternoon.</span></li>
+      <li><span class="e">🔁</span> <span><strong>Closes the loop</strong> — turns field lessons into product improvements, not just one-off hacks.</span></li>
+    </ul>
+    <div class="pill-row">
+      <span class="pill">🧑‍💻 Engineering</span>
+      <span class="pill">🤝 Customer empathy</span>
+      <span class="pill">🧩 Systems thinking</span>
+      <span class="pill">⚡ Speed</span>
+      <span class="pill">📡 Feedback loops</span>
+    </div>
+  </section>
+
+  <footer>
+    🚀 Forward Deployed Engineer — built where the problem lives.
+  </footer>
+</div>
+</body>
+</html>
